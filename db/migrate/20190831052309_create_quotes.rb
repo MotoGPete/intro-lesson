@@ -1,8 +1,9 @@
 class CreateQuotes < ActiveRecord::Migration[5.2]
   def change
+  	drop_table :quotes
     create_table :quotes do |t|
     	t.string :saying
-    	t.string :saying
+    	t.string :author
       t.timestamps
     end
   end
